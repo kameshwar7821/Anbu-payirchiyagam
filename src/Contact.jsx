@@ -23,12 +23,12 @@ function Contact() {
           </p>
 
           <div className="hero-contact-buttons">
-            <a href="tel:+919999999999" className="call-btn">
+            <a href="tel:+917010205599" className="call-btn">
               📞 Call Us
             </a>
 
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/917010205599"
               className="whatsapp-btn"
               target="_blank"
               rel="noreferrer"
@@ -77,7 +77,9 @@ function Contact() {
             <span>VISIT US</span>
             <h3>Our Centre</h3>
             <p>
-              [Your Tuition Centre Address]
+              <a href="https://maps.app.goo.gl/D1XqPCjcEbFEqXRH8?g_st=aw" target="_blank" rel="noreferrer" style={{color: "inherit", textDecoration: "none"}}>
+                Anbu Payirchiyagam (View on Map)
+              </a>
             </p>
           </div>
 
@@ -92,7 +94,7 @@ function Contact() {
             <span>CALL US</span>
             <h3>Phone</h3>
             <p>
-              +91 99999 99999
+              +91 70102 05599
             </p>
           </div>
 
@@ -107,7 +109,9 @@ function Contact() {
             <span>EMAIL US</span>
             <h3>Email</h3>
             <p>
-              info@anbupayirchiyagam.com
+              <a href="mailto:anbupayirchiyagam23@gmail.com" style={{color: "inherit", textDecoration: "none"}}>
+                anbupayirchiyagam23@gmail.com
+              </a>
             </p>
           </div>
 
@@ -342,56 +346,6 @@ function Contact() {
       </section>
 
 
-      {/* ================= MAP ================= */}
-      <section className="location-section">
-
-        <div className="location-heading">
-
-          <span className="section-label">
-            FIND US
-          </span>
-
-          <h2>
-            Visit Our
-            <span> Learning Centre.</span>
-          </h2>
-
-          <p>
-            Come visit us and know more about our tuition programs.
-          </p>
-
-        </div>
-
-
-        <div className="map-box">
-
-          <div className="map-placeholder">
-
-            <div className="map-pin">
-              📍
-            </div>
-
-            <h3>
-              Anbu Payirchiyagam
-            </h3>
-
-            <p>
-              Your Tuition Centre Location
-            </p>
-
-            <a
-              href="#"
-              className="direction-btn"
-            >
-              Get Directions →
-            </a>
-
-          </div>
-
-        </div>
-
-      </section>
-
 
       {/* ================= CTA ================= */}
       <section className="contact-cta">
@@ -414,7 +368,7 @@ function Contact() {
 
         </div>
 
-        <a href="tel:+919999999999">
+        <a href="tel:+917010205599">
           Call Now →
         </a>
 

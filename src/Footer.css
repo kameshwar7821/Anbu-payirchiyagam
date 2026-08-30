@@ -1,0 +1,610 @@
+/* =====================================================
+   ANBU PAYIRCHIYAGAM - PREMIUM FOOTER
+===================================================== */
+
+.footer {
+  position: relative;
+  background: #071326;
+  color: #ffffff;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+/* Background glow */
+
+.footer-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+  opacity: 0.18;
+}
+
+.footer-glow-1 {
+  width: 350px;
+  height: 350px;
+  background: #168cff;
+  left: -180px;
+  bottom: -150px;
+}
+
+.footer-glow-2 {
+  width: 400px;
+  height: 400px;
+  background: #006eff;
+  right: -220px;
+  bottom: -200px;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.footer-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1380px;
+  margin: auto;
+
+  padding: 20px 30px 10px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1.3fr;
+
+  gap: 65px;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand {
+  max-width: 440px;
+}
+
+.footer-logo {
+  width: 115px;
+  height: 115px;
+
+  object-fit: contain;
+
+  background: white;
+
+  padding: 5px;
+
+  margin-bottom: 10px;
+
+  border-radius: 2px;
+}
+
+.footer-brand h3 {
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  margin: 0 0 10px;
+
+  line-height: 1.6;
+}
+
+.footer-brand h3 span {
+  color: #3198ff;
+}
+
+.footer-brand p {
+  color: #9aaac2;
+
+  font-size: 15px;
+
+  line-height: 2;
+
+  margin: 0;
+}
+
+
+/* =====================================================
+   FEATURE CARDS
+===================================================== */
+
+.footer-features {
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 28px;
+}
+
+.feature-card {
+  width: 82px;
+  min-height: 105px;
+
+  border: 1px solid rgba(38, 146, 255, 0.45);
+
+  border-radius: 9px;
+
+  background: rgba(13, 35, 65, 0.65);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #2995ff;
+
+  box-shadow:
+    0 10px 30px rgba(0, 132, 255, 0.2);
+
+  background: rgba(16, 47, 84, 0.8);
+}
+
+.feature-icon {
+  font-size: 27px;
+
+  margin-bottom: 9px;
+}
+
+.feature-card span {
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: #d9e4f5;
+}
+
+
+/* =====================================================
+   FOOTER COLUMNS
+===================================================== */
+
+.footer-column h2 {
+  font-size: 21px;
+
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-weight: 700;
+}
+
+.title-line {
+  width: 36px;
+  height: 3px;
+
+  background: #2494ff;
+
+  margin-bottom: 15px;
+
+  border-radius: 5px;
+}
+
+
+/* Links */
+
+.footer-column > a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  text-decoration: none;
+
+  color: #91a4c0;
+
+  font-size: 15px;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  transition: all 0.3s ease;
+}
+
+.footer-column > a:hover {
+  color: #ffffff;
+
+  padding-left: 8px;
+}
+
+.footer-column > a:first-of-type {
+  border-top: none;
+}
+
+.footer-column > a > b {
+  color: #319aff;
+
+  font-size: 19px;
+
+  min-width: 20px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  width: 24px;
+
+  font-size: 20px;
+
+  color: #2e98ff;
+
+  flex-shrink: 0;
+}
+
+.contact-item p {
+  margin: 0;
+
+  color: #c2cede;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   JOIN CARD
+===================================================== */
+
+.join-card {
+  margin-top: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 19px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(38, 147, 255, 0.5);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(18, 48, 87, 0.95),
+      rgba(6, 25, 50, 0.95)
+    );
+
+  box-shadow:
+    0 0 25px rgba(0, 120, 255, 0.12);
+}
+
+.join-icon {
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #248ff5;
+
+  font-size: 27px;
+}
+
+.join-card h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+}
+
+.join-card p {
+  margin: 0;
+
+  color: #aebed2;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+.join-arrow {
+  margin-left: auto;
+
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #258ff5;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 20px;
+
+  transition: 0.3s;
+}
+
+.join-arrow:hover {
+  transform: translateX(5px);
+
+  background: #42a2ff;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.footer-quote {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1380px;
+
+  margin: auto;
+
+  padding: 25px 50px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.footer-quote p {
+  color: #aebbd0;
+
+  font-size: 15px;
+
+  font-style: italic;
+
+  text-align: center;
+
+  margin: 0;
+}
+
+.quote-icon {
+  font-size: 24px;
+}
+
+.quote-line {
+  width: 180px;
+
+  height: 1px;
+
+  background: #278ff5;
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.footer-bottom {
+  max-width: 1380px;
+
+  margin: auto;
+
+  padding: 15px 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: #8ea1bc;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.social-links {
+  display: flex;
+
+  gap: 13px;
+}
+
+.social-links a {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  border: 1px solid #218cf3;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #208df5;
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 8px 20px rgba(20, 130, 255, 0.3);
+}
+
+.made-with {
+  color: #b4c2d3 !important;
+}
+
+.made-with:first-letter {
+  color: #2995ff;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+
+  .contact-column {
+    grid-column: span 2;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    padding: 55px 25px 40px;
+
+    gap: 45px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+
+  .footer-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .footer-features {
+    flex-wrap: wrap;
+  }
+
+  .feature-card {
+    width: calc(50% - 8px);
+  }
+
+  .contact-column {
+    grid-column: auto;
+  }
+
+  .footer-quote {
+    padding: 25px;
+
+    gap: 10px;
+  }
+
+  .quote-line {
+    display: none;
+  }
+
+  .footer-quote p {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    padding: 25px;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .footer-features {
+    gap: 8px;
+  }
+
+  .feature-card {
+    width: calc(50% - 4px);
+  }
+
+  .join-card {
+    padding: 14px;
+  }
+
+  .join-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+}

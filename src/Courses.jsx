@@ -47,6 +47,15 @@ const courses = [
       "Flexible online learning with live classes, study materials and doubt support.",
     subjects: ["Live Classes", "Study Materials", "Doubt Support", "Online Tests"],
   },
+  {
+    icon: "🧮",
+    level: "06",
+    title: "Abacus",
+    classes: "Brain Development Program",
+    description:
+      "Enhance mental arithmetic skills, concentration, and cognitive abilities through structured Abacus training.",
+    subjects: ["Mental Math", "Concentration", "Memory Power", "Speed & Accuracy"],
+  },
 ];
 
 function Courses() {
