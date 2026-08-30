@@ -74,7 +74,7 @@ const Footer = () => {
 
           <div className="contact-item">
             <span className="contact-icon">◷</span>
-            <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+            <p>Mon - Sat: 6:00 PM - 9:00 PM</p>
           </div>
 
 

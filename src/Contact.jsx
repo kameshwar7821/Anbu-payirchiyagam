@@ -126,7 +126,7 @@ function Contact() {
             <span>WORKING HOURS</span>
             <h3>Mon – Sat</h3>
             <p>
-              8:00 AM – 8:00 PM
+              6:00 PM – 9:00 PM
             </p>
           </div>
 
