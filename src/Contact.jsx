@@ -189,16 +189,12 @@ function Contact() {
 
             <div className="social-icons">
 
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/anbupayirchiyagam" target="_blank" rel="noreferrer" aria-label="Instagram">
                 ◎
               </a>
 
-              <a href="#" aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1GYiQ3RCPi/" target="_blank" rel="noreferrer" aria-label="Facebook">
                 f
-              </a>
-
-              <a href="#" aria-label="YouTube">
-                ▶
               </a>
 
             </div>

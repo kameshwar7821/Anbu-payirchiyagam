@@ -169,37 +169,53 @@ function About() {
 
           <div className="feature-card">
             <div>👨🏫</div>
+
             <h3>Experienced Teaching</h3>
+
             <p>
-              Clear and easy-to-understand teaching methods for every student.
+              Clear and easy-to-understand teaching methods
+              for every student.
             </p>
           </div>
+
 
           <div className="feature-card">
             <div>👤</div>
+
             <h3>Personal Attention</h3>
+
             <p>
-              Understanding each student's strengths and areas for improvement.
+              Understanding each student's strengths and
+              areas for improvement.
             </p>
           </div>
+
 
           <div className="feature-card">
             <div>📝</div>
+
             <h3>Regular Assessments</h3>
+
             <p>
-              Frequent tests and practice sessions to track academic progress.
+              Frequent tests and practice sessions to track
+              academic progress.
             </p>
           </div>
 
+
           <div className="feature-card">
             <div>🏆</div>
+
             <h3>Result Oriented</h3>
+
             <p>
-              Focused preparation to help students perform confidently in exams.
+              Focused preparation to help students perform
+              confidently in exams.
             </p>
           </div>
 
         </div>
+
       </section>
 
 

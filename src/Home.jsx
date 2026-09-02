@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Process from "./Process";
 import { Link } from "react-router-dom";
 import "./App.css";
 
@@ -31,35 +30,41 @@ function Home() {
 
   const features = [
     {
-      icon: "👨\u200d🏫",
+      icon: "👨‍🏫",
       title: "Expert Tutors",
-      text: "Experienced teachers who focus on individual student needs."
+      description:
+        "Experienced teachers who focus on individual student needs.",
     },
     {
       icon: "🎯",
       title: "Personal Attention",
-      text: "Small batches for better interaction and doubt clearing."
+      description:
+        "Small batches for better interaction and doubt clearing.",
     },
     {
       icon: "📖",
       title: "Concept-Based Learning",
-      text: "Understand concepts clearly instead of simply memorizing."
+      description:
+        "Understand concepts clearly instead of simply memorizing.",
     },
     {
       icon: "📝",
       title: "Regular Tests",
-      text: "Frequent assessments to track student progress."
+      description:
+        "Regular tests and assessments to improve exam preparation.",
     },
     {
       icon: "💡",
       title: "Doubt Clearing",
-      text: "Dedicated support to clear difficult concepts."
+      description:
+        "Get your doubts cleared with proper guidance and explanation.",
     },
     {
       icon: "📈",
       title: "Progress Tracking",
-      text: "Parents can understand their child's academic improvement."
-    }
+      description:
+        "Track student performance and identify areas for improvement.",
+    },
   ];
 
   const steps = [
@@ -207,9 +212,9 @@ function Home() {
                 Join Now →
               </a>
 
-              <a href="#courses" className="btn-secondary">
+              <Link to="/courses" className="btn-secondary">
                 Explore Courses
-              </a>
+              </Link>
 
             </div>
 
@@ -292,7 +297,7 @@ function Home() {
         </div>
 
 
-        <div className="course-grid">
+        <div className="home-course-grid">
 
           {courses.map((course, index) => (
 
@@ -306,7 +311,7 @@ function Home() {
 
               <p>{course.text}</p>
 
-              <a href="#contact">
+              <a href="/courses#programs">
                 View Course →
               </a>
 
@@ -368,48 +373,160 @@ function Home() {
 
       {/* ================= WHY CHOOSE US ================= */}
 
-      <section className="section why-us" id="why-us">
+      <section
+        style={{
+          width: "100%",
+          padding: "90px 20px",
+          background: "#ffffff",
+          boxSizing: "border-box",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
 
-        <div className="section-heading">
+          {/* Heading */}
+          <div
+            style={{
+              textAlign: "center",
+              maxWidth: "750px",
+              margin: "0 auto 55px",
+            }}
+          >
+            <span
+              style={{
+                display: "inline-block",
+                color: "#1683ff",
+                fontSize: "14px",
+                fontWeight: "700",
+                letterSpacing: "2px",
+                marginBottom: "12px",
+              }}
+            >
+              WHY CHOOSE US
+            </span>
 
-          <span>WHY CHOOSE US</span>
+            <h2
+              style={{
+                margin: "0 0 15px",
+                fontSize: "38px",
+                lineHeight: "1.2",
+                color: "#111827",
+                fontWeight: "700",
+              }}
+            >
+              Learn Better. Perform Better.
+            </h2>
 
-          <h2>
-            Why Choose <strong>Anbu Payirchiyagam?</strong>
-          </h2>
+            <p
+              style={{
+                margin: "0",
+                color: "#6b7280",
+                fontSize: "16px",
+                lineHeight: "1.7",
+              }}
+            >
+              We provide a supportive learning environment that helps
+              students understand concepts, build confidence and achieve
+              better results.
+            </p>
+          </div>
 
-          <p>
-            We provide the right guidance, personal attention and
-            learning environment for every student.
-          </p>
+          {/* Cards */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+              gap: "28px",
+              width: "100%",
+            }}
+          >
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                style={{
+                  width: "100%",
+                  minHeight: "300px",
+                  padding: "35px 30px",
+                  background: "#f7fbfa",
+                  border: "1px solid #e8f0ed",
+                  borderRadius: "22px",
+                  textAlign: "center",
+                  boxSizing: "border-box",
+
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+
+                  transition:
+                    "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-8px)";
+                  e.currentTarget.style.borderColor = "#2196ff";
+                  e.currentTarget.style.boxShadow =
+                    "0 15px 35px rgba(33, 150, 243, 0.15)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.borderColor = "#e8f0ed";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              >
+
+                {/* Icon */}
+                <div
+                  style={{
+                    width: "72px",
+                    height: "72px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "38px",
+                    background: "#ffffff",
+                    borderRadius: "18px",
+                    marginBottom: "22px",
+                    boxShadow: "0 8px 20px rgba(0, 0, 0, 0.06)",
+                  }}
+                >
+                  {feature.icon}
+                </div>
+
+                {/* Title */}
+                <h3
+                  style={{
+                    margin: "0 0 14px",
+                    color: "#111827",
+                    fontSize: "21px",
+                    lineHeight: "1.3",
+                    fontWeight: "700",
+                  }}
+                >
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  style={{
+                    maxWidth: "260px",
+                    margin: "0",
+                    color: "#6b7280",
+                    fontSize: "15px",
+                    lineHeight: "1.7",
+                  }}
+                >
+                  {feature.description}
+                </p>
+
+              </div>
+            ))}
+          </div>
 
         </div>
-
-
-        <div className="feature-grid">
-
-          {features.map((feature, index) => (
-
-            <div className="feature-card" key={index}>
-
-              <div className="feature-icon">
-                {feature.icon}
-              </div>
-
-              <div>
-
-                <h3>{feature.title}</h3>
-
-                <p>{feature.text}</p>
-
-              </div>
-
-            </div>
-
-          ))}
-
-        </div>
-
       </section>
 
 
@@ -434,9 +551,6 @@ function Home() {
               academic foundations and greater confidence.
             </p>
 
-            <a href="#contact" className="results-button cta-button">
-              Start Your Journey →
-            </a>
 
           </div>
 
@@ -576,8 +690,6 @@ function Home() {
 
       </section>
 
-
-      <Process />
 
       {/* ================= ENVIRONMENT ================= */}
 
@@ -749,7 +861,7 @@ function Home() {
             towards better learning and better results.
           </p>
 
-          <a href="tel:+919999999999">
+          <a href="https://wa.me/917010205599" target="_blank" rel="noopener noreferrer">
             Join Anbu Payirchiyagam →
           </a>
 

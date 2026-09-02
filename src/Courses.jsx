@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Courses.css";
 
 const courses = [
@@ -59,6 +60,21 @@ const courses = [
 ];
 
 function Courses() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.replace("#", ""));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   return (
     <div className="courses-page">
 
@@ -149,7 +165,7 @@ function Courses() {
 
 
       {/* COURSE INTRO */}
-      <section className="course-intro">
+      <section className="course-intro" id="programs">
 
         <div>
           <span className="section-tag">CHOOSE YOUR PROGRAM</span>
