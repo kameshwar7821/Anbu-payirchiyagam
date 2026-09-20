@@ -783,3 +783,498 @@
   }
 
 }
+
+
+/* =================================
+   COURSE POPUP OVERLAY
+================================= */
+
+.course-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+
+  animation: modalFade 0.25s ease;
+}
+
+
+/* =================================
+   POPUP BOX
+================================= */
+
+.course-modal {
+  position: relative;
+
+  width: 100%;
+  max-width: 650px;
+
+  max-height: 88vh;
+
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 30px;
+
+  border: 1px solid #e1eee9;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.18);
+
+  animation: modalSlide 0.3s ease;
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes modalFade {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes modalSlide {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =================================
+   CLOSE BUTTON
+================================= */
+
+.modal-close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+
+  background: #f1f6f4;
+
+  color: #667085;
+
+  border-radius: 50%;
+
+  font-size: 24px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+
+  background: #00a86b;
+
+  color: white;
+
+  transform: rotate(90deg);
+
+}
+
+
+/* =================================
+   MODAL HEADER
+================================= */
+
+.modal-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding-right: 40px;
+
+  margin-bottom: 20px;
+}
+
+
+.modal-icon {
+
+  width: 65px;
+  height: 65px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #effaf6;
+
+  border-radius: 17px;
+
+  font-size: 30px;
+
+  border: 1px solid #dcefe8;
+}
+
+
+.modal-tag {
+
+  color: #00a86b;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  margin-bottom: 5px;
+}
+
+
+.modal-header h2 {
+
+  margin: 0;
+
+  color: #10203f;
+
+  font-size: 28px;
+
+  font-weight: 600;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.modal-description {
+
+  color: #667085;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin: 0 0 22px;
+
+}
+
+
+/* =================================
+   MODAL SECTION
+================================= */
+
+.modal-section {
+
+  margin-top: 20px;
+
+  padding: 18px;
+
+  background: #fafcfb;
+
+  border: 1px solid #e8f0ed;
+
+  border-radius: 14px;
+}
+
+
+.modal-section h3 {
+
+  margin: 0 0 14px;
+
+  color: #10203f;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+
+/* =================================
+   SUBJECTS
+================================= */
+
+.modal-subjects {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.modal-subjects span {
+
+  padding: 7px 10px;
+
+  background: #eef9f5;
+
+  color: #087d55;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =================================
+   LEARNING
+================================= */
+
+.modal-learning {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 8px;
+}
+
+
+.modal-learning div {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 10px;
+
+  background: white;
+
+  border: 1px solid #edf2f0;
+
+  border-radius: 8px;
+
+  color: #52605b;
+
+  font-size: 12px;
+}
+
+
+.modal-learning span {
+
+  color: #00a86b;
+
+  font-weight: 700;
+}
+
+
+/* =================================
+   MODAL FOOTER
+================================= */
+
+.modal-footer {
+
+  margin-top: 20px;
+
+  padding: 16px 18px;
+
+  background: #eaf8f3;
+
+  border-radius: 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+
+.modal-footer strong {
+
+  color: #10203f;
+
+  font-size: 14px;
+}
+
+
+.modal-footer p {
+
+  margin: 3px 0 0;
+
+  color: #667085;
+
+  font-size: 11px;
+}
+
+
+.modal-contact {
+
+  border: none;
+
+  background: #00a86b;
+
+  color: white;
+
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+
+.modal-contact:hover {
+
+  background: #008957;
+
+  transform: translateY(-1px);
+}
+
+
+/* =================================
+   POPUP SCROLLBAR
+================================= */
+
+.course-modal::-webkit-scrollbar {
+
+  width: 5px;
+}
+
+
+.course-modal::-webkit-scrollbar-track {
+
+  background: transparent;
+}
+
+
+.course-modal::-webkit-scrollbar-thumb {
+
+  background: #cfe3dc;
+
+  border-radius: 10px;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .course-modal-overlay {
+
+    padding: 12px;
+  }
+
+
+  .course-modal {
+
+    padding: 22px;
+
+    max-height: 90vh;
+
+    border-radius: 18px;
+  }
+
+
+  .modal-header {
+
+    gap: 12px;
+
+    padding-right: 30px;
+  }
+
+
+  .modal-icon {
+
+    width: 55px;
+    height: 55px;
+
+    font-size: 25px;
+  }
+
+
+  .modal-header h2 {
+
+    font-size: 23px;
+  }
+
+
+  .modal-tag {
+
+    font-size: 9px;
+  }
+
+
+  .modal-learning {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .modal-footer {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .modal-contact {
+
+    width: 100%;
+  }
+
+}

@@ -70,18 +70,9 @@
 }
 
 .footer-logo {
-  width: 60px;
-  height: 60px;
+  width: 92px;
+  height: 92px;
 
-  object-fit: contain;
-
-  background: white;
-
-  padding: 5px;
-
-  margin-bottom: 10px;
-
-  border-radius: 2px;
 }
 
 .footer-brand h3 {
@@ -90,7 +81,6 @@
 
   color: #ffffff;
 
-  margin: 0 0 10px;
 
   line-height: 1.6;
 }
@@ -542,8 +532,8 @@
   }
 
   .footer-logo {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
   }
 
   .footer-features {

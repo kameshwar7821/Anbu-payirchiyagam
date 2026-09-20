@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./Courses.css";
 
@@ -8,59 +8,76 @@ const courses = [
     level: "01",
     title: "Primary Classes",
     classes: "1st – 5th Standard",
+    tag: "FOUNDATION",
     description:
       "Build strong academic foundations with simple, engaging and activity-based learning.",
     subjects: ["Tamil", "English", "Mathematics", "Science"],
+    learn: ["Basic literacy", "Number skills", "Environmental awareness", "Creative thinking", "Reading habits", "Handwriting"],
   },
   {
     icon: "📘",
     level: "02",
     title: "Middle School",
     classes: "6th – 8th Standard",
+    tag: "INTERMEDIATE",
     description:
       "Strengthen concepts and develop better problem-solving and analytical skills.",
     subjects: ["Tamil", "English", "Mathematics", "Science", "Social"],
+    learn: ["Analytical thinking", "Problem solving", "Scientific temper", "Language fluency", "General knowledge", "Study skills"],
   },
   {
     icon: "🎓",
     level: "03",
     title: "High School",
     classes: "9th – 10th Standard",
+    tag: "BOARD EXAM PREP",
     description:
       "Focused academic coaching with regular practice and examination preparation.",
     subjects: ["Tamil", "English", "Maths", "Science", "Social"],
+    learn: ["Exam strategies", "Time management", "Concept clarity", "Scoring techniques", "Mock tests", "Revision planning"],
   },
   {
     icon: "🏆",
     level: "04",
     title: "Higher Secondary",
     classes: "11th – 12th Standard",
+    tag: "ADVANCED",
     description:
       "Advanced subject coaching designed for board examinations and future goals.",
     subjects: ["Maths", "Physics", "Chemistry", "Biology"],
+    learn: ["In-depth subject knowledge", "Competitive exam basics", "Laboratory skills", "Career guidance", "Stress management", "High-scoring focus"],
   },
   {
     icon: "💻",
     level: "05",
     title: "Online Classes",
     classes: "Learn From Anywhere",
+    tag: "FLEXIBLE",
     description:
       "Flexible online learning with live classes, study materials and doubt support.",
     subjects: ["Live Classes", "Study Materials", "Doubt Support", "Online Tests"],
+    learn: ["Digital literacy", "Self-paced learning", "Interactive sessions", "E-study materials", "Regular assessments", "Instant doubt clearing"],
   },
   {
     icon: "🧮",
     level: "06",
     title: "Abacus",
     classes: "Brain Development Program",
+    tag: "SKILL DEVELOPMENT",
     description:
       "Enhance mental arithmetic skills, concentration, and cognitive abilities through structured Abacus training.",
     subjects: ["Mental Math", "Concentration", "Memory Power", "Speed & Accuracy"],
+    learn: ["Fast calculations", "Enhanced memory", "Improved focus", "Visualizing numbers", "Brain coordination", "Confidence building"],
   },
 ];
 
 function Courses() {
   const location = useLocation();
+  const [selectedCourse, setSelectedCourse] = useState(null);
+
+  const closeCourse = () => {
+    setSelectedCourse(null);
+  };
 
   useEffect(() => {
     if (location.hash) {
@@ -192,9 +209,7 @@ function Courses() {
 
           {courses.map((course, index) => (
             <div
-              className={`course-card ${
-                index === 2 ? "featured-course" : ""
-              }`}
+              className="course-card"
               key={course.level}
             >
 
@@ -228,7 +243,7 @@ function Courses() {
                 ))}
               </div>
 
-              <button className="course-btn">
+              <button className="course-btn" onClick={() => setSelectedCourse(course)}>
                 Explore Course <span>→</span>
               </button>
 
@@ -319,28 +334,101 @@ function Courses() {
       </section>
 
 
-      {/* CTA */}
-      <section className="course-cta">
 
-        <div>
-          <span>START YOUR LEARNING JOURNEY</span>
-
-          <h2>
-            Ready to Learn,
-            <strong> Grow & Succeed?</strong>
-          </h2>
-
-          <p>
-            Choose the right course and take the next step towards
-            academic success.
-          </p>
+      {selectedCourse && (
+        <div
+          className="course-modal-overlay"
+          onClick={closeCourse}
+        >
+          <div
+            className="course-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+      
+            {/* Close Button */}
+            <button
+              className="modal-close"
+              onClick={closeCourse}
+              aria-label="Close"
+            >
+              ×
+            </button>
+      
+            {/* Header */}
+            <div className="modal-header">
+      
+              <div className="modal-icon">
+                {selectedCourse.icon}
+              </div>
+      
+              <div>
+                <div className="modal-tag">
+                  {selectedCourse.tag}
+                </div>
+      
+                <h2>{selectedCourse.title}</h2>
+              </div>
+      
+            </div>
+      
+            {/* Description */}
+            <p className="modal-description">
+              {selectedCourse.description}
+            </p>
+      
+            {/* Subjects */}
+            <div className="modal-section">
+      
+              <h3>📚 Subjects</h3>
+      
+              <div className="modal-subjects">
+                {selectedCourse.subjects.map((subject, index) => (
+                  <span key={index}>
+                    ✓ {subject}
+                  </span>
+                ))}
+              </div>
+      
+            </div>
+      
+            {/* What You'll Learn */}
+            <div className="modal-section">
+      
+              <h3>🎯 What You'll Learn</h3>
+      
+              <div className="modal-learning">
+      
+                {selectedCourse.learn.map((item, index) => (
+                  <div key={index}>
+                    <span>✓</span>
+                    {item}
+                  </div>
+                ))}
+      
+              </div>
+      
+            </div>
+      
+            {/* Bottom */}
+            <div className="modal-footer">
+      
+              <div>
+                <strong>Ready to start learning?</strong>
+                <p>Contact us for more details.</p>
+              </div>
+      
+              <button 
+                className="modal-contact"
+                onClick={() => window.open('https://wa.me/917010205599', '_blank')}
+              >
+                Contact Us →
+              </button>
+      
+            </div>
+      
+          </div>
         </div>
-
-        <button>
-          Join Now <span>→</span>
-        </button>
-
-      </section>
+      )}
 
     </div>
   );
