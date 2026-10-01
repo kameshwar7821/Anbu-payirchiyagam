@@ -561,7 +561,7 @@ textarea {
 .feature-icon {
   font-size: 35px;
   margin-bottom: 5px;
-  
+
   /* Remove background box to match the clean look of the step cards */
   display: flex;
   align-items: center;
@@ -696,11 +696,18 @@ textarea {
 .tutor-card h3 {
   margin-top: 20px;
   color: #172033;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  padding: 0 10px;
+  word-break: break-word;
 }
 
 .tutor-card p {
   color: #13a572;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 0 10px;
+  word-break: break-all;
 }
 
 .tutor-card span {

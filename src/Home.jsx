@@ -617,56 +617,48 @@ function Home() {
               alt="Tutor"
             />
 
-            <h3>Expert Tutor</h3>
+            <h3>Mrs.P.SARASWATHI ANBARASAN</h3>
 
-            <p>Mathematics Specialist</p>
-
-            <span>Experienced Educator</span>
+            <p>M.sc..M.Ed.</p>
 
           </div>
 
           <div className="tutor-card">
 
             <img
-              src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80"
+              src="/manju.png"
               alt="Tutor"
             />
 
-            <h3>Expert Tutor</h3>
+            <h3>Mrs. G.MANJULA DEVI</h3>
 
-            <p>Mathematics Specialist</p>
-
-            <span>Experienced Educator</span>
+            <p>M.Sc.M.Phil.,B.Ed.,PGDCA</p>
 
           </div>
 
           <div className="tutor-card">
 
             <img
-              src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80"
+              src="/thamarai.png"
               alt="Tutor"
             />
 
-            <h3>Expert Tutor</h3>
+            <h3>Mrs. B. THAMARAI SELVI</h3>
 
-            <p>Mathematics Specialist</p>
-
-            <span>Experienced Educator</span>
+            <p>D. C. Ed., M. A., B. Ed</p>
 
           </div>
 
           <div className="tutor-card">
 
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+              src="/anitha.png"
               alt="Tutor"
             />
 
-            <h3>Expert Tutor</h3>
+            <h3>ANITHA. G</h3>
 
-            <p>Science Specialist</p>
-
-            <span>Experienced Educator</span>
+            <p>B. SC B. Ed BOTANY</p>
 
           </div>
 
