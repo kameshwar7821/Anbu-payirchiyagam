@@ -220,7 +220,7 @@ function Contact() {
           </div>
 
 
-          <form>
+          <form onSubmit={(e) => { e.preventDefault(); alert('Thank you for your enquiry! We will get back to you soon.'); }}>
 
             <div className="form-row">
 
